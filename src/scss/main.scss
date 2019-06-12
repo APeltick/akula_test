@@ -1,0 +1,31 @@
+// Libs
+//@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+//@import '~slick-carousel/slick/slick';
+
+// Config
+@import "config/vars";
+@import "config/mixins";
+
+//Layout
+@import "layout/base";
+@import "layout/reset";
+
+// Elements
+@import "elements/arrow";
+@import "elements/button";
+@import "elements/form";
+@import "elements/input";
+@import "elements/select";
+@import "elements/burger-menu";
+
+// Blocks
+@import "blocks/header";
+@import "blocks/contacts";
+@import "blocks/socials";
+@import "blocks/hero";
+@import "blocks/tours";
+@import "blocks/tour-card";
+
+@import "blocks/advantage";
+@import "blocks/proposal";
+@import "blocks/footer";

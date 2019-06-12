@@ -1,0 +1,61 @@
+.proposal {
+  padding: rem(40) 0;
+  background: url("/assets/img/proposal_bg.jpg") no-repeat 100% 100%;
+  background-size: cover;
+}
+
+.proposal__title {
+  font-size: rem(24);
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.proposal-form {
+  background: rgba(0,0,0,0.6);
+  padding: rem(55) rem(38);
+  margin-top: rem(34);
+}
+
+.proposal-form__block {
+  @media screen and (max-width: $desktopWidth) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.proposal-form__row {
+  @media screen and (max-width: $desktopWidth) {
+    flex: 1 1 25%;
+    margin-right: 0;
+    padding-right: rem(25);
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $tabletWidth) {
+    flex: 1 1 50%;
+    margin-top: rem(35);
+    &:nth-child(2n+2) {
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $tabletWidth) {
+    flex: 1 1 100%;
+    padding-right: 0;
+  }
+}
+
+.proposal-form__button {
+  flex-grow: 1;
+  flex-shrink: 1;
+  white-space: nowrap;
+  line-height: 14px;
+
+  @media screen and (max-width: $desktopWidth) {
+    flex-grow: 0;
+    margin-top: rem(35);
+  }
+}

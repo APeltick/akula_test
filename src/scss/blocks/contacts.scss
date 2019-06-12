@@ -1,0 +1,10 @@
+.contacts__item {
+  margin-right: 55px;
+  font-size: 14px;
+  padding: 10px 0;
+  color: rgba(243, 243, 243, 0.8);
+  font-weight: bold;
+  &:last-child {
+    margin-right: 0;
+  }
+}

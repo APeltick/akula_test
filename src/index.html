@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href=".<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="container header__menu-area">
+                <a href="#" class="header__logo">
+                    <img src="./assets/img/logo.png" alt="кураж тур">
+                </a>
+                <div class="header__controls">
+                    <div class="header__contacts contacts">
+                        <div class="contacts__item">
+                            <a href="http://maps.google.com/?q=г. Харьков, ул. Мироносицкая 10">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Харьков, ул. Мироносицкая 10
+                            </a>
+                        </div>
+                        <div class="contacts__item">
+                            <a href="tel:+380999908100">
+                                <i class="fas fa-phone-alt"></i>
+                                +38 (099) 990-81-00 (viber, telegram)
+                            </a>
+                        </div>
+                        <div class="contacts__item socials">
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">Главная</a>
+                            </li>
+                            <li class="header__menu-item header__menu-item_hover">
+                                <span class="header__menu-link ">Туры<span class="arrow arrow-bottom"></span></span>
+                                <ul class="header__menu-dropdown-list">
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Горящие туры</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Поиск тура</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Туры по Украине</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Экскурсионные туры</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Week end туры</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">Страна</a>
+                            </li>
+                            <li class="header__menu-item header__menu-item_hover">
+                                <span class="header__menu-link">Туры<span class="arrow arrow-bottom"></span></span>
+                                <ul class="header__menu-dropdown-list">
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Авиабилеты</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Визовая поддержка</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Индивидуальный трансфер</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Подарочные сертификаты</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Бронирование отелей и апартаментов</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Как забронировать и оплатить тур</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">О компании</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__menu-area header__menu-area_mobile">
+                <a href="#" class="header__logo">
+                    <img src="./assets/img/logo.png" alt="кураж тур">
+                </a>
+                <div class="header__controls">
+                    <div class="header__contacts contacts">
+                        <div class="contacts__location">
+                            <div class="contacts__item">
+                                <a href="http://maps.google.com/?q=г. Харьков, ул. Мироносицкая 10">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    г. Харьков, ул. Мироносицкая 10
+                                </a>
+                            </div>
+                            <div class="contacts__item">
+                                <a href="tel:+380999908100">
+                                    <i class="fas fa-phone-alt"></i>
+                                    +38 (099) 990-81-00 (viber, telegram)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contacts__item socials">
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">Главная</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <span class="header__menu-link"><span class="arrow arrow-bottom"></span>Туры</span>
+                                <ul class="header__menu-dropdown-list">
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Горящие туры</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Поиск тура</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Туры по Украине</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Экскурсионные туры</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Week end туры</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">Страна</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <span class="header__menu-link"><span class="arrow arrow-bottom"></span>Услуги</span>
+                                <ul class="header__menu-dropdown-list">
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Авиабилеты</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Визовая поддержка</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Индивидуальный трансфер</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Подарочные сертификаты</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Бронирование отелей и апартаментов</a>
+                                    </li>
+                                    <li class="header__menu-dropdown-item">
+                                        <a href="" class="header__menu-dropdown-link">Как забронировать и оплатить тур</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">О компании</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="" class="header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-menu">
+                    <div class="bar">
+                        <span class="bar-1"> </span>
+                        <span class="bar-2"> </span>
+                        <span class="bar-3"> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__content">
+                <div class="container">
+                    <div class="hero__ad">
+                        <h1 class="hero__ad-title">Лучшие предложения по солнечному Египту из Харькова</h1>
+                        <button class="hero__ad-button button">Получить предложение</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <img class="swiper-slide hero__img" src="./assets/img/content/header-slider.jpg" alt="">
+                        <img class="swiper-slide hero__img" src="./assets/img/content/header-slider.jpg" alt="">
+                        <img class="swiper-slide hero__img" src="./assets/img/content/header-slider.jpg" alt="">
+                    </div>
+                    <div class="container swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section>
+        <div class="tours">
+            <ul class="container tours__nav">
+                <li class="tours__nav-item">
+                    <a href="#tab-group-0" class="tours__nav-link tours__nav-link_active" >Горщие туры</a>
+                </li>
+                <li class="tours__nav-item">
+                    <a href="#tab-group-1" class="tours__nav-link" >Популярные туры</a>
+                </li>
+            </ul>
+            <div class="tours__list">
+                <div id="tab-group-0" class="tours__tab tours__tab_active">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tours__card-next">
+                        <span class="arrow arrow-right"></span>
+                    </div>
+                    <div class="tours__card-prev">
+                        <span class="arrow arrow-left"></span>
+                    </div>
+                </div>
+                <div id="tab-group-1" class="tours__tab">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide tour-card">
+                                <div class="tours__card">
+                                    <div class="tour-card__image">
+                                        <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                    </div>
+                                    <div class="tour-card__info">
+                                        <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                        <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                        <div class="tour-card__footer">
+                                            <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                            <a href="#" class="tour-card__detail">
+                                                <span class="arrow arrow-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tours__card-mobile">
+                                    <div class="tour-card__title">8 марта в Cyrene Sharm hotel</div>
+                                    <div class="tour-card__date">(12.03.2018 — 19.03.2018)</div>
+                                    <div class="tour-card__body">
+                                        <div class="tour-card__image">
+                                            <img src="./assets/img/content/tour-card-1.jpg" alt="турция">
+                                        </div>
+                                        <div class="tour-card__descr">Перелёт, питание по системе all inclusive, трансфер</div>
+                                    </div>
+                                    <div class="tour-card__footer">
+                                        <div class="tour-card__price">1 259 грн <sup class="tour-card__price-desc">/за 1 человека</sup></div>
+                                        <a href="#" class="tour-card__detail">
+                                            <span class="arrow arrow-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tours__card-next">
+                        <span class="arrow arrow-right"></span>
+                    </div>
+                    <div class="tours__card-prev">
+                        <span class="arrow arrow-left"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantage">
+            <div class="container">
+                <h2 class="advantage__title">Наши преимущества</h2>
+                <div class="advantage__content">
+                    <div class="advantage__img">
+                        <img src="./assets/img/advantage.jpg" alt="преимущества">
+                    </div>
+                    <div class="swiper-container advantage__text">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                                <p>Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. </p>
+                            </div>
+                        </div>
+                        <!-- Add Scroll Bar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proposal">
+            <div class="container">
+                <h2 class="proposal__title">Хoчу предложение по туру</h2>
+                <div class="proposal-form">
+                    <form action="">
+                        <div class="form-block proposal-form__block">
+                            <div class="form-block__row proposal-form__row">
+                                <input type="text" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Имя</label>
+                            </div>
+                            <div class="form-block__row proposal-form__row">
+                                <input type="text" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Email</label>
+                            </div>
+                            <div class="form-block__row proposal-form__row">
+                                <input type="text" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Телефон</label>
+                            </div>
+                            <div class="form-block__row proposal-form__row">
+                                <div class="form-select">
+                                    <ul>
+                                        <li data-value="1" class="selected">Страна тура</li>
+                                        <li data-value="2">Турция</li>
+                                        <li data-value="3">Египет</li>
+                                        <li data-value="4">Шри-Ланка</li>
+                                        <li data-value="5">Доминикана</li>
+                                        <li data-value="6">Челябинск</li>
+                                        <li data-value="7">Мордор</li>
+                                    </ul>
+                                    <input type="hidden" name="myOptions" value="3 bar">
+                                </div>
+                            </div>
+                            <button class="proposal-form__button button">Получить предложение</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container footer__container">
+                <div class="footer__column footer-info">
+                    <div class="footer-info__logo">
+                        <img src="./assets/img/logo_footer.png" alt="">
+                    </div>
+                    <div class="footer-info__desc">
+                        Кураж тур агенство,которое предоставляет услуги по поиску, оформлению и подбору туров для вас и ваших родных.
+                    </div>
+                    <div class="footer-info__akula">
+                        Создание сайта <img src="./assets/img/logo_akula.png" alt="webakula">
+                    </div>
+                </div>
+                <div class="footer__column footer-nav">
+                    <p class="footer__title">Навигация</p>
+                    <ul class="footer__link-list">
+                        <li class="footer__link-item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#">О компании</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#">Туры</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#">Услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column footer-support">
+                    <p class="footer__title">Поддержка</p>
+                    <ul class="footer__link-list">
+                        <li class="footer__link-item">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#">Блог</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#">Обратная связь</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column footer-contacts">
+                    <p class="footer__title">Контакты</p>
+                    <div class="footer__contacts">
+                        <div class="contacts__item">
+                            <a href="http://maps.google.com/?q=г. Харьков, ул. Мироносицкая 10">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Харьков, ул. Мироносицкая 10
+                            </a>
+                        </div>
+                        <div class="contacts__item">
+                            <a href="tel:+380999908100">
+                                <i class="fas fa-phone-alt"></i>
+                                +38 (099) 990-81-00
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacts__item socials">
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script defer src=".<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %>
+</body>
+</html>

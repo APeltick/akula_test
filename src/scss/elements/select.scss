@@ -1,0 +1,81 @@
+.form-select .material-icons{
+  vertical-align: middle;
+}
+.form-select{
+  position:relative;
+  display:inline-block;
+  vertical-align:middle;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-right: 8px;
+  width: 100%;
+}
+.form-select ul {
+  list-style: none;
+  display:inline-block;
+  margin:0; padding:0;
+  width: 100%;
+}
+.form-select li{
+  width: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 25px;
+  display: none;
+  padding: 10px 10px 6px 5px;
+  margin:0;
+  box-sizing: initial;
+
+}
+.form-select > ul:first-of-type{
+  max-width:120px;
+}
+.form-select > ul:first-of-type li.selected{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #e5e5e5;
+}
+.form-select i.material-icons{
+  opacity: 0.5;
+  margin:0;
+  padding:0;
+}
+/*jQ*/
+.form-select ul.form-select-drop{
+  position: absolute;
+  z-index: 9999;
+  visibility: hidden; opacity:0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(255,255,255,0.2);
+  top: 100%;
+  left: 0;
+  transition: 0.24s;
+  max-height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.form-select ul.form-select-drop.show{
+  visibility: visible; opacity: 1;
+  max-height: 170px;
+}
+.form-select ul.form-select-drop li{
+  display: block;
+  transition: background 0.24s;
+  cursor: pointer;
+}
+.form-select ul.form-select-drop li.selected{
+  background: rgba(255,255,255, 0.6);
+}
+.form-select ul.form-select-drop li:hover{
+  background: rgba(255,255,255, 0.6);
+  color: $primary-yellow;
+}
+
+.form-select .arrow {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  border-top: 2px solid rgba(255,255,255, 0.6);
+  border-right: 2px solid rgba(255,255,255, 0.6);
+}

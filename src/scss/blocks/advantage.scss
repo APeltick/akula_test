@@ -1,0 +1,85 @@
+.advantage {
+  background-color: $light-gray;
+  padding: rem(40) 0 rem(70) 0;
+}
+
+.advantage__title {
+  text-transform: uppercase;
+  font-size: rem(24);
+  font-weight: bold;
+
+}
+
+.advantage__content {
+  display: flex;
+  align-items: center;
+  margin-top: rem(20);
+  @media screen and (max-width: $phoneWidth) {
+    flex-direction: column;
+  }
+}
+
+.advantage__img {
+  margin-right: rem(90);
+  flex-shrink: 0;
+  @media screen and (max-width: $smDesktopWidth) {
+    margin-right: rem(15);
+  }
+  @media screen and (max-width: $tabletWidth) {
+    flex-basis: 35%;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    margin-bottom: 15px;
+  }
+}
+
+.advantage__img,
+.advantage__text {
+  flex-grow: 1;
+  @media screen and (max-width: $smDesktopWidth) {
+    flex: 1 1 50%;
+  }
+}
+
+.advantage__text {
+  max-height: rem(265);
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @media screen and (max-width: $tabletWidth) {
+    flex-basis: 35%;
+    max-height: 200px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-height: 182px;
+  }
+}
+
+.advantage__content .swiper-slide {
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: rem(50);
+  font-size: rem(16);
+
+  @media screen and (max-width: $tabletWidth) {
+    padding-right: rem(20);
+  }
+}
+
+.advantage__content {
+  .swiper-scrollbar {
+    width: 1px;
+    background: rgba(18, 18, 18, 0.1);
+  }
+
+  .swiper-scrollbar-drag {
+    width: 8px;
+    height: 8px;
+    background: $primary-yellow;
+    left: -4px;
+  }
+}

@@ -1,0 +1,62 @@
+html {
+  font-family: $mainFont;
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $tabletWidth) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+    font-size: 12px;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  //min-height: 100%;
+  background-color: $default-color;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-end;
+}
+
+.container {
+  padding: 0 rem(15);
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1140px;
+  //@media screen and (max-width: $desktopWidth) {
+  //  max-width: 1140px;
+  //}
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: 960px;
+  }
+  @media screen and (max-width: $tabletWidth) {
+    max-width: 720px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: 540px;
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+
+  }
+}
